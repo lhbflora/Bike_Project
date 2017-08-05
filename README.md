@@ -59,7 +59,11 @@ It can be loaded with Pandas.
                     infer_datetime_format=True)
 	trip.head()
 ```
+![_20170805210650](https://user-images.githubusercontent.com/25804842/28995692-b1a9ed5e-7a22-11e7-8798-ea33101ab202.png)
+
 #
+
+
 	
 Extract time information
 #
