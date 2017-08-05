@@ -72,8 +72,19 @@ Extract time information
 	trips['date'] = ind.date.astype('datetime64')
 	trips['hour'] = ind.hour
 ```
+create a pivot table involving starttime, usertype, counting the daily use and total trip duration(sec)
+![_20170805215958](https://user-images.githubusercontent.com/25804842/28996071-fa706b96-7a2a-11e7-8e26-cf83031dd779.png)
 
-
+#
+```python
+	fig = by_date['starttime'].plot( title = 'Average Daily Use(2015)',legend = True)
+	plt.legend(['Annual Subscribers','Short-term Pass'])
+	plt.savefig('by_date.jpg')
+	plt.show()
+```
+![by_date](https://user-images.githubusercontent.com/25804842/28996092-62e0bf6e-7a2b-11e7-9fb8-6bb3d458e312.jpg)
+![by_hour](https://user-images.githubusercontent.com/25804842/28996099-7e586a8a-7a2b-11e7-8d9b-8c9a67613239.jpg)
+![by_weekday](https://user-images.githubusercontent.com/25804842/28996102-876020e6-7a2b-11e7-83da-580be89e2a81.jpg)
 ![hotstation](https://user-images.githubusercontent.com/25804842/28555066-ed42c10c-712f-11e7-9b26-72c04826fbdb.png)
 
 ![trip_numbers](https://user-images.githubusercontent.com/25804842/28555076-fac818b8-712f-11e7-8186-e3a1f16d94c0.png)
