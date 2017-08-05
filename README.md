@@ -12,7 +12,7 @@ City Bike is one of the largest company offering public bike service. The good n
 
 There are a lot of tools that I can use to analyze such a great amount of data, and my tool of choice is SQL server(To clean the data), and Python(To visualize to data). PyData stack NumPy,Pandas,Matplotlib offer a great help to make the data understandable
 
-#Downloading the data
+### Downloading the data
 
 The data is accessible on the official website https://www.citibikenyc.com/system-data
 The data is some kind in different format.
@@ -72,6 +72,9 @@ Extract time information
 	trips['date'] = ind.date.astype('datetime64')
 	trips['hour'] = ind.hour
 ```
+###  Users' Structure
+![7e9d75d2519bb91714769ca1bbc907f](https://user-images.githubusercontent.com/25804842/28996485-fad04a44-7a33-11e7-96a1-4748556b8655.png)
+* Most of people are likely to subscribe for a Annual ride while still some  
 ###  Time regularities
 With a pivot table involving starttime, usertype, counting the daily use and total trip duration(sec), we can better restructure the data.
 ![_20170805215958](https://user-images.githubusercontent.com/25804842/28996071-fa706b96-7a2a-11e7-8e26-cf83031dd779.png)
