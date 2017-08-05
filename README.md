@@ -17,10 +17,17 @@ There are a lot of tools that I can use to analyze such a great amount of data, 
 The data is accessible on the official website https://www.citibikenyc.com/system-data
 The data is some kind in different format.
 
-### 比如我们可以在多行文本框里输入一段代码,来一个Java版本的HelloWorld吧
+### From 201501-citibike-tripdata.csv
+    tripduration,starttime,stoptime,start station id,start station name,start station latitude,start station longitude,end station id,end station name,end station latitude,end station longitude,bikeid,usertype,birth year,gender
+    1346,1/1/2015 0:01,1/1/2015 0:24,455,1 Ave & E 44 St,40.75001986,-73.96905301,265,Stanton St & Chrystie St,40.72229346,-73.99147535,18660,Subscriber,1960,2
+	363,1/1/2015 0:02,1/1/2015 0:08,434,9 Ave & W 18 St,40.74317449,-74.00366443,482,W 15 St & 7 Ave,40.73935542,-73.99931783,16085,Subscriber,1963,1
+### From 201504-citibike-tripdata.csv 
     "tripduration","starttime","stoptime","start station id","start station name","start station latitude","start station longitude","end station id","end station name","end station latitude","end station longitude","bikeid","usertype","birth year","gender"
     "241","4/1/2015 00:00:23","4/1/2015 00:04:25","494","W 26 St & 8 Ave","40.74734825","-73.99723551","489","10 Ave & W 28 St","40.75066386","-74.00176802","15510","Subscriber","1992","2"
 	"578","4/1/2015 00:00:52","4/1/2015 00:10:31","82","St James Pl & Pearl St","40.71117416","-74.00016545","2008","Little West St & 1 Pl","40.70569254","-74.01677685","15014","Subscriber","1982","1"
+
+
+
 
 
 
