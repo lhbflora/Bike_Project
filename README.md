@@ -31,8 +31,8 @@ The data is some kind in different format.
 1. After importing all csv files into SQL Server by "bulk insert" and delete the text qualifier(")
 #
 ```python	
-	bulk insert [CitiBikedata-2015] from 'D:\My_path\201501-citibike-tripdata.csv'with(firstRow=2,Fieldterminator=',',RowTerminator='0x0a')
-    update [CityBike].[dbo].[CitiBike-tripdata-2015]
+	bulk insert [CitiBikedata-2015] from 'D:\My_path\201501-citibike-		tripdata.csv'with(firstRow=2,Fieldterminator=',',RowTerminator='0x0a')
+	update [CityBike].[dbo].[CitiBike-tripdata-2015]
 	set [tripduration] =  replace([tripduration],'"','')
 ```
 2. Insert a column 'trip_ID' as the Primary Key
@@ -73,7 +73,7 @@ Extract time information
 	trips['hour'] = ind.hour
 ```
 ###  Time regularities
-create a pivot table involving starttime, usertype, counting the daily use and total trip duration(sec)
+With a pivot table involving starttime, usertype, counting the daily use and total trip duration(sec), we can better restructure the data.
 ![_20170805215958](https://user-images.githubusercontent.com/25804842/28996071-fa706b96-7a2a-11e7-8e26-cf83031dd779.png)
 
 ![by_date](https://user-images.githubusercontent.com/25804842/28996092-62e0bf6e-7a2b-11e7-9fb8-6bb3d458e312.jpg)
@@ -86,7 +86,7 @@ This plot shows the daily trend, separated by Annual members (top) and Day-Pass 
 Let's take a clearer loolk at the weekly trend by averaging all rides by day of week
 
 ![by_weekday](https://user-images.githubusercontent.com/25804842/28996102-876020e6-7a2b-11e7-83da-580be89e2a81.jpg)
-* annual members tend to use their bikes during Monday to Friday (i.e. as part of a commute) while day pass users tend to use their bikes on the weekend(i.e. as temporary riding). 
+* Annual members tend to use their bikes during Monday to Friday (i.e. as part of a commute) while day pass users tend to use their bikes on the weekend(i.e. as temporary riding). 
 
 ![by_hour](https://user-images.githubusercontent.com/25804842/28996099-7e586a8a-7a2b-11e7-8d9b-8c9a67613239.jpg)
 A great difference can be seen between a "commute" pattern, which sharply peaks in the morning and evening (e.g. annual members during weekdays) and a "recreational" pattern, which has a broad peak in the early afternoon (e.g. annual members on weekends, and short-term users all the time). Interestingly, the average behavior of annual pass holders on weekends seems to be almost identical to the average behavior of day-pass users on weekdays.
