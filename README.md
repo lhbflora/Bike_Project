@@ -77,6 +77,7 @@ create a pivot table involving starttime, usertype, counting the daily use and t
 ![_20170805215958](https://user-images.githubusercontent.com/25804842/28996071-fa706b96-7a2a-11e7-8e26-cf83031dd779.png)
 
 ![by_date](https://user-images.githubusercontent.com/25804842/28996092-62e0bf6e-7a2b-11e7-9fb8-6bb3d458e312.jpg)
+
 This plot shows the daily trend, separated by Annual members (top) and Day-Pass users (bottom). A couple observations:
 * In winter, fewer people are willing to ride while the total number of users reach to the top during Sep and Oct
 * Day pass users seem to show a steady ebb and flow with the seasons; the usage of annual users has not waned as significantly with the coming of fall.
@@ -94,7 +95,7 @@ A great difference can be seen between a "commute" pattern, which sharply peaks 
 ![tripduration](https://user-images.githubusercontent.com/25804842/28996304-2d07911a-7a30-11e7-891a-d69b8e42419c.jpg)
 Here the red dashed line separating the free rides (left) from the rides which incur a usage fee (right).
 * It seems that short-term users are much more sensitive to the system rules: only a small tail of the trip distribution lies beyond 30 minutes.
-* on the other hand, with the commute habit, annual Subscribers seems not care about the extra fee. I guess that may results from the lower extra cost(\$2.50 per 15mins) than day pass users(\$4 per 15mins)
+* On the other hand, with the commute habit, annual Subscribers seems not care about the extra fee. I guess that may results from the lower extra cost(\$2.50 per 15mins) than day pass users(\$4 per 15mins)
 ![hotstation](https://user-images.githubusercontent.com/25804842/28555066-ed42c10c-712f-11e7-9b26-72c04826fbdb.png)
 
 ![trip_numbers](https://user-images.githubusercontent.com/25804842/28555076-fac818b8-712f-11e7-8186-e3a1f16d94c0.png)
