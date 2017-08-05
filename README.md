@@ -72,13 +72,14 @@ trips['hour'] = ind.hour
 ![7e9d75d2519bb91714769ca1bbc907f](https://user-images.githubusercontent.com/25804842/28996485-fad04a44-7a33-11e7-96a1-4748556b8655.png)
 * Most of people are likely to subscribe for a Annual ride while still some short-term users tend to pay for short-term pass
 
-#### Age structures
+#### Age structure
 ![figure_1](https://user-images.githubusercontent.com/25804842/28996752-b3b1a9be-7a38-11e7-96f3-a0f7d45bfa3f.png)
 * People between 25 to 40 take the main position in all the users, followed by people between 40 to 60. 
 * As a physical-demanding transportation option, biking is prefered by young office workers, serving as a green and healthy way of commuting.
 
 ###  Time regularities
 With a pivot table involving starttime, usertype, counting the daily use and total trip duration(sec), we can better restructure the data.
+
 ![_20170805215958](https://user-images.githubusercontent.com/25804842/28996071-fa706b96-7a2a-11e7-8e26-cf83031dd779.png)
 
 ![by_date](https://user-images.githubusercontent.com/25804842/28996092-62e0bf6e-7a2b-11e7-9fb8-6bb3d458e312.jpg)
