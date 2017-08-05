@@ -27,14 +27,9 @@ The data is some kind in different format.
 	"578","4/1/2015 00:00:52","4/1/2015 00:10:31","82","St James Pl & Pearl St","40.71117416","-74.00016545","2008","Little West St & 1 Pl","40.70569254","-74.01677685","15014","Subscriber","1982","1"
 
 
+### So After importing all csv files into SQL Server by "bulk insert"
+    bulk insert [CitiBikedata-2015]from 'D:\lecture materials\SummerNote\SQL\JC-201606-citibike-tripdata\201501-citibike-tripdata.csv'with(firstRow=2,Fieldterminator=',',RowTerminator='0x0a')
 
-
-
-
-	     
-		    
-
-  
 ![hotstation](https://user-images.githubusercontent.com/25804842/28555066-ed42c10c-712f-11e7-9b26-72c04826fbdb.png)
 
 ![trip_numbers](https://user-images.githubusercontent.com/25804842/28555076-fac818b8-712f-11e7-8186-e3a1f16d94c0.png)
