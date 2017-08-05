@@ -13,6 +13,7 @@ City Bike is one of the largest company offering public bike service. The good n
 There are a lot of tools that I can use to analyze such a great amount of data, and my tool of choice is SQL server(To clean the data), and Python(To visualize to data). PyData stack NumPy,Pandas,Matplotlib offer a great help to make the data understandable
 
 #Downloading the data
+
 The data is accessible on the official website https://www.citibikenyc.com/system-data
 The data is some kind in different format.
   "tripduration","starttime","stoptime","start station id","start station name","start station latitude","start station longitude","end station id","end station name","end station latitude","end station longitude","bikeid","usertype","birth year","gender"
