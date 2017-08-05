@@ -30,10 +30,11 @@ The data is some kind in different format.
 
 1. After importing all csv files into SQL Server by "bulk insert" and delete the text qualifier(")
 #
+```python	
 	bulk insert [CitiBikedata-2015] from 'D:\My_path\201501-citibike-tripdata.csv'with(firstRow=2,Fieldterminator=',',RowTerminator='0x0a')
     update [CityBike].[dbo].[CitiBike-tripdata-2015]
-	set [tripduration]	 =   replace([tripduration],'"','')
-
+	set [tripduration] =  replace([tripduration],'"','')
+```
 2. Insert a column 'trip_ID' as the Primary Key
 3. If we want to establish a completed database, the data should be devided into the following parts:
 
@@ -45,20 +46,28 @@ The data is some kind in different format.
 After cleaning the data, the exported csv data can be analysis in Python. The processed fileis around 1.57FB
 Some standard Python package imports needed:
 #
+```python
 	import pandas as pd
 	import numpy as np
 	import matplotlib.pyplot as plt
+```
 It can be loaded with Pandas.
 #
+```python
 	trips = pd.read_csv('2015_triptime.csv',
                     parse_dates=['starttime', 'stoptime'],low_memory = False,
-                    infer_datetime_format=True)	    
+                    infer_datetime_format=True)
+	trip.head()
+```
+#
+	
 Extract time information
 #
+```python
 	ind = pd.DatetimeIndex(trips.starttime)
 	trips['date'] = ind.date.astype('datetime64')
 	trips['hour'] = ind.hour
-
+```
 
 
 ![hotstation](https://user-images.githubusercontent.com/25804842/28555066-ed42c10c-712f-11e7-9b26-72c04826fbdb.png)
