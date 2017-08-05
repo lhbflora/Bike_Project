@@ -1,7 +1,4 @@
 # Bike_Project
-
-As a good supplement of public traffic, low cost and convenience rental bike is chosen by millions of people on the way to the bus/subway station to work or just take a leisure riding. So I propose a project to research how to optimize the existing system and what can we do in  the future to promote the development of this environmentally friendly industry. According to the data posted, a lot of things can be explore. For example,compare to the last-year-data, how does percentage of the subscribers and costomers change. According to this change how can we adjust the annual and short time price setting. Or what's near the hottest station such that people are willing to rent the bike and to what extent each factor affect the uage. So we can adjust the amount of  bike to be placed in each station. Moreover, in combination with the infrastructure construction, where should we build the new station. 
-
 City Bike is one of the largest companies offering public bike service. The good news is that a large cache of data of every month in every year since the company was established is available on its website, which offers prizes for different categories of analysis.
 
 There are a lot of tools that I can use to analyze such a great amount of data, and my tool of choice is SQL server(To clean the data), and Python(To visualize to data). PyData stack NumPy,Pandas,Matplotlib offer a great help to make the data understandable
@@ -104,4 +101,7 @@ A great difference can be seen between a "commute" pattern, which sharply peaks 
 Here the red dashed line separating the free rides (left) from the rides which incur a usage fee (right).
 * It seems that short-term users are much more sensitive to the system rules: only a small tail of the trip distribution lies beyond 30 minutes.
 * On the other hand, with the commute habit, annual Subscribers seems not care about the extra fee. I guess that may results from the lower extra cost(\$2.50 per 15mins) than day pass users(\$4 per 15mins)
+
+
+As a good supplement of public traffic, low cost and convenience rental bike is chosen by millions of people on the way to the bus/subway station to work or just take a leisure riding. So I propose a project to research how to optimize the existing system and what can we do in  the future to promote the development of this environmentally friendly industry. According to the data posted, a lot more things can be explore. For example,compare to the last-year-data, how does percentage of the subscribers and costomers change. According to this change how can we adjust the annual and short time price setting. Or what's near the hottest station such that people are willing to rent the bike and to what extent each factor affect the uage. So we can adjust the amount of  bike to be placed in each station. Moreover, in combination with the infrastructure construction, where should we build the new station. 
 
