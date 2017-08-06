@@ -97,7 +97,7 @@ Let's take a clearer loolk at the weekly trend by averaging all rides by day of 
 A great difference can be seen between a "commute" pattern, which sharply peaks in the morning and evening (e.g. annual members during weekdays) and a "recreational" pattern, which has a broad peak in the early afternoon (e.g. annual members on weekends, and short-term users all the time). Interestingly, the average behavior of annual pass holders on weekends seems to be almost identical to the average behavior of day-pass users on weekdays.
 
 ###  Trip Duration
-![tripduration](https://user-images.githubusercontent.com/25804842/28996304-2d07911a-7a30-11e7-891a-d69b8e42419c.jpg)
+![tripduration](https://user-images.githubusercontent.com/25804842/29000310-50774a3c-7a99-11e7-8413-dc284273ef7b.jpg)
 Here the red dashed line separating the free rides (left) from the rides which incur a usage fee (right).
 * It seems that short-term users are much more sensitive to the system rules: only a small tail of the trip distribution lies beyond 30 minutes.
 * On the other hand, with the commute habit, annual Subscribers seems not care about the extra fee. I guess that may results from the lower extra cost(\$2.50 per 15mins) than day pass users(\$4 per 15mins)
