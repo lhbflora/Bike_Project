@@ -33,7 +33,7 @@ set [tripduration] =  replace([tripduration],'"','')
 
 
 ## Data Analysis
-After cleaning the data, the exported csv data can be analysis in Python. The processed fileis around 1.57GB. To reduce the size of data, I divided the file into different parts according to the analysis usage so in this repository there are several csv files.
+After cleaning the data, the exported csv data can be analysis in Python. The processed fileis around 1.57GB. \n
 Some standard Python package imports needed:
 ```python
 import pandas as pd
@@ -60,6 +60,7 @@ ind = pd.DatetimeIndex(trips.starttime)
 trips['date'] = ind.date.astype('datetime64')
 trips['hour'] = ind.hour
 ```
+To reduce the size of data, I divided the file into different parts according to the analysis usage so in this repository there are several csv files.
 ##  Users Type Structure
  Percentage of Annual members and short-term customers
  
