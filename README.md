@@ -34,7 +34,7 @@ set [tripduration] =  replace([tripduration],'"','')
 
 
 ## Data Analysis
-After cleaning the data, the exported csv data can be analysis in Python. The processed fileis around 1.57FB
+After cleaning the data, the exported csv data can be analysis in Python. The processed fileis around 1.57GB. To reduce the size of data, I divided the file into different parts according to the analysis usage.
 Some standard Python package imports needed:
 #
 ```python
