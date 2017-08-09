@@ -95,14 +95,14 @@ Let's take a clearer loolk at the weekly trend by averaging all rides by day of 
 
 A great difference can be seen between a "commute" pattern, which sharply peaks in the morning and evening (e.g. annual members during weekdays) and a "recreational" pattern, which has a broad peak in the early afternoon (e.g. annual members on weekends, and short-term users all the time). Interestingly, the average behavior of annual pass holders on weekends seems to be almost identical to the average behavior of day-pass users on weekdays.
 
-##  Trip Duration
+###  Trip Duration
 ![tripduration](https://user-images.githubusercontent.com/25804842/29000310-50774a3c-7a99-11e7-8413-dc284273ef7b.jpg)
 
 Here the red dashed line separating the free rides (left) from the rides which incur a usage fee (right).
 * It seems that short-term users are much more sensitive to the system rules: only a small tail of the trip distribution lies beyond 30 minutes.
 * On the other hand, with the commute habit, annual Subscribers seems not care about the extra fee. I guess that may results from the lower extra cost(\$2.50 per 15mins) than day pass users(\$4 per 15mins)
 
-## Station Distribution
+### Station Distribution
 gmaps is a plugin for including interactive Google maps in the IPython Notebook.\n
 Here we use Jupyter Notebook to create a heatmap of bike stations in New York according to the frequency of utilization.
 
@@ -127,5 +127,6 @@ print(station.head())
 ![image](https://user-images.githubusercontent.com/25804842/29109740-b6ecaa3a-7d16-11e7-9d73-b7d3920ddb6f.png)
 ![map _smaller](https://user-images.githubusercontent.com/25804842/29109770-d8991be6-7d16-11e7-8c68-9b9837a701a8.png)
 
+## 
 As a good supplement of public traffic, low cost and convenience rental bike is chosen by millions of people on the way to the bus/subway station to work or just take a leisure riding. So I propose a project to research how to optimize the existing system and what can we do in  the future to promote the development of this environmentally friendly industry. According to the data posted, a lot more things can be explore. For example,compare to the last-year-data, how does percentage of the subscribers and costomers change. According to this change how can we adjust the annual and short time price setting. Or what's near the hottest station such that people are willing to rent the bike and to what extent each factor affect the uage. So we can adjust the amount of  bike to be placed in each station. Moreover, in combination with the infrastructure construction, where should we build the new station. 
 
