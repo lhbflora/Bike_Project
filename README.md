@@ -20,8 +20,7 @@ The data is some kind in different format.
 
 
 1. After importing all csv files into SQL Server by "bulk insert" and delete the text qualifier(")
-#
-```python	
+```sql	
 bulk insert [CitiBikedata-2015] from 'D:\My_path\201501-citibike-tripdata.csv'with(firstRow=2,Fieldterminator=',',RowTerminator='0x0a')
 update [CityBike].[dbo].[CitiBike-tripdata-2015]
 set [tripduration] =  replace([tripduration],'"','')
