@@ -105,7 +105,7 @@ Here the red dashed line separating the free rides (left) from the rides which i
 gmaps is a plugin for including interactive Google maps in the IPython Notebook.\n
 Here we use Jupyter Notebook to create a heatmap of bike stations in New York according to the frequency of utilization.
 
-First of all,  count the frequency with SQL server query
+First of all,  counting the frequency with SQL server query
 ```sql
 select  distinct  [start_station_latitude],[start_station_longitude],[start_station_latitude] + ',' +[start_station_longitude] as [start_position], count(*) as [Weight]
 from[dbo].[CitiBikedata-2015]
