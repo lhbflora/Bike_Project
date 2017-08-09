@@ -3,12 +3,12 @@ City Bike is one of the largest companies offering public bike service. The good
 
 There are a lot of tools that I can use to analyze such a great amount of data, and my tool of choice is SQL server(To clean the data), and Python(To visualize to data). PyData stack NumPy,Pandas,Matplotlib offer a great help to make the data understandable
 
-### Downloading the data
+## Downloading the data
 
 The data is accessible on the official website https://www.citibikenyc.com/system-data
 The data is some kind in different format.
 
-### Data Cleaning
+## Data Cleaning
 #### From 201501-citibike-tripdata.csv
     tripduration,starttime,stoptime,start station id,start station name,start station latitude,start station longitude,end station id,end station name,end station latitude,end station longitude,bikeid,usertype,birth year,gender
     1346,1/1/2015 0:01,1/1/2015 0:24,455,1 Ave & E 44 St,40.75001986,-73.96905301,265,Stanton St & Chrystie St,40.72229346,-73.99147535,18660,Subscriber,1960,2
@@ -43,7 +43,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 ```
 It can be loaded with Pandas.
-#
 ```python
 trips = pd.read_csv('2015_triptime.csv',
                     parse_dates=['starttime', 'stoptime'],low_memory = False,
@@ -58,18 +57,18 @@ In the original data, one row is a record for a user in one trip, including Trip
 
 	
 Extract time information
-#
 ```python
 ind = pd.DatetimeIndex(trips.starttime)
 trips['date'] = ind.date.astype('datetime64')
 trips['hour'] = ind.hour
 ```
-###  Users' Structure
-#### Percentage of Annual members and short-term customers
-![7e9d75d2519bb91714769ca1bbc907f](https://user-images.githubusercontent.com/25804842/28996485-fad04a44-7a33-11e7-96a1-4748556b8655.png)
+##  Users Type Structure
+ Percentage of Annual members and short-term customers
+ 
+ ![7e9d75d2519bb91714769ca1bbc907f](https://user-images.githubusercontent.com/25804842/28996485-fad04a44-7a33-11e7-96a1-4748556b8655.png)
 * Most of people are likely to subscribe for a Annual ride while still some short-term users tend to pay for short-term pass
 
-#### Age structure
+### Age structure
 ![figure_1](https://user-images.githubusercontent.com/25804842/28996752-b3b1a9be-7a38-11e7-96f3-a0f7d45bfa3f.png)
 * People between 25 to 40 take the main position in all the users, followed by people between 40 to 60. 
 * As a physical-demanding transportation option, biking is prefered by young office workers, serving as a green and healthy way of commuting.
@@ -96,12 +95,37 @@ Let's take a clearer loolk at the weekly trend by averaging all rides by day of 
 
 A great difference can be seen between a "commute" pattern, which sharply peaks in the morning and evening (e.g. annual members during weekdays) and a "recreational" pattern, which has a broad peak in the early afternoon (e.g. annual members on weekends, and short-term users all the time). Interestingly, the average behavior of annual pass holders on weekends seems to be almost identical to the average behavior of day-pass users on weekdays.
 
-###  Trip Duration
+##  Trip Duration
 ![tripduration](https://user-images.githubusercontent.com/25804842/29000310-50774a3c-7a99-11e7-8413-dc284273ef7b.jpg)
+
 Here the red dashed line separating the free rides (left) from the rides which incur a usage fee (right).
 * It seems that short-term users are much more sensitive to the system rules: only a small tail of the trip distribution lies beyond 30 minutes.
 * On the other hand, with the commute habit, annual Subscribers seems not care about the extra fee. I guess that may results from the lower extra cost(\$2.50 per 15mins) than day pass users(\$4 per 15mins)
 
+## Station Distribution
+gmaps is a plugin for including interactive Google maps in the IPython Notebook.\n
+Here we use Jupyter Notebook to create a heatmap of bike stations in New York according to the frequency of utilization.
+
+First of all,  count the frequency with SQL server query
+```sql
+select  distinct  [start_station_latitude],[start_station_longitude],[start_station_latitude] + ',' +[start_station_longitude] as [start_position], count(*) as [Weight]
+from[dbo].[CitiBikedata-2015]
+group by [start_station_latitude] + ',' +[start_station_longitude],[start_station_latitude],[start_station_longitude]
+```
+Then explort the result as a csv file.
+Open a new notebook in Jupyter
+```python
+import gmaps
+import pandas as pd
+station = pd.read_csv('2015_tripstation.csv',
+                    low_memory = False,
+                    infer_datetime_format=True)
+locations = station[["start_station_latitude","start_station_longitude"]]
+print(station.head())
+```
+![_20170809151924](https://user-images.githubusercontent.com/25804842/29109613-41ecfafa-7d16-11e7-91e7-caae2d195c40.png)
+![image](https://user-images.githubusercontent.com/25804842/29109740-b6ecaa3a-7d16-11e7-9d73-b7d3920ddb6f.png)
+![map _smaller](https://user-images.githubusercontent.com/25804842/29109770-d8991be6-7d16-11e7-8c68-9b9837a701a8.png)
 
 As a good supplement of public traffic, low cost and convenience rental bike is chosen by millions of people on the way to the bus/subway station to work or just take a leisure riding. So I propose a project to research how to optimize the existing system and what can we do in  the future to promote the development of this environmentally friendly industry. According to the data posted, a lot more things can be explore. For example,compare to the last-year-data, how does percentage of the subscribers and costomers change. According to this change how can we adjust the annual and short time price setting. Or what's near the hottest station such that people are willing to rent the bike and to what extent each factor affect the uage. So we can adjust the amount of  bike to be placed in each station. Moreover, in combination with the infrastructure construction, where should we build the new station. 
 
